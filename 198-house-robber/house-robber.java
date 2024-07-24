@@ -3,8 +3,8 @@ class Solution {
         int n = nums.length;
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
-        return f(nums, dp, 0, n);
-        
+        f(nums, dp, 0, n);
+        return dp[0];
 
     }
 
