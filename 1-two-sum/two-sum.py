@@ -4,11 +4,9 @@ class Solution:
         # map.contains(nums[i]) return -> i, map.get(nums[i]);
         # else map.put(target - nums[i], i);
         map = {}
-        for i,j in enumerate(nums):
-            k = target - j
+        for i in range(0, len(nums)):
+            k = target - nums[i]
             if k in map:
                 return [i, map[k]]
-            map[j] = i
-        
+            map[nums[i]] = i
         return []
-
