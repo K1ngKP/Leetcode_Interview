@@ -6,7 +6,7 @@ class Solution:
         map = {}
         for i in range(0, len(nums)):
             k = target - nums[i]
-            if k in map:
-                return [i, map[k]]
-            map[nums[i]] = i
+            if nums[i] in map:
+                return [i, map[nums[i]]]
+            map[k] = i
         return []
