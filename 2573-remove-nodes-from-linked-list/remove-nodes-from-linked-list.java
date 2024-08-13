@@ -24,21 +24,18 @@ class Solution {
             st.push(temp.val);
             temp = temp.next;
         }
-        System.out.print(st);
-
-        ListNode curr = null;
         ListNode prev= null;
 
         while(!st.isEmpty())
         {
             int curr_val = st.pop();
-            curr = new ListNode(curr_val);
-            curr.next = prev;
-            prev = curr;
+            temp = new ListNode(curr_val);
+            temp.next = prev;
+            prev = temp;
 
         }
 
-        return curr;
+        return temp;
 
     }
 }
